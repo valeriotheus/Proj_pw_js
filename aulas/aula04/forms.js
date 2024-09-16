@@ -13,7 +13,8 @@ function adicionarLinha() {
     //Se for preenchido vazio
     if(nome === '' || idade === '' ||admissão === ''){
         alert("Preencha os valores do formulário!")
-    }
+    } else {
+        
     //Cria uma linha na tabela se não existir
     const tabela = document.getElementById("tabelaDados").getElementsByTagName('tbody')[0];
 
@@ -37,5 +38,7 @@ function adicionarLinha() {
 
     //Limpar formulario
     document.getElementById("linhaForm").reset();
-}
 
+    }
+}
+    
