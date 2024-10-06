@@ -3,36 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 04 - formulário em JS</title>
+    <title>Esmagador Luizo - Portal do vendedor</title>
     <link rel="stylesheet" href="./estilo.css">
     <script src="./forms.js"></script>
 </head>
 <body>
-    <h1>Registro de vendas|Esmagador Luizo</h1>
+    <h1>Esmagador Luizo - Registro de vendas</h1>
+    <p>Preencha todas as informações solicitadas no formulário corretamente</p>
     <hr>
     <form id="linhaForm">
-    <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+    <input type="number" name="id" id="id" placeholder="Digite o ID do produto" required>
     <br><br>
-    <input type="number" name="idade" id="idade" placeholder="Digite sua idade" required>
+    <input type="text" name="produto" id="produto" placeholder="Digite o produto" required>
     <br><br>
-    <label for "datavenda">Data da venda</label>
+    <input type="text" name="marca" id="marca" placeholder="Digite a marca" required>
+    <br><br>
+    <input type="text" name="segmento" id="segmento" placeholder="Digite o segmento do produto" required>
+    <br><br>
+    <input type="number" name="valor" id="valor" placeholder="Digite o valor da venda" required>
+    <br><br>
+    <label for="datavenda">Data da venda</label>
     <br><br>
     <input type="date" name="Data da venda" id="datavenda" required>
     <br><br>
-    <button type="button" onclick="adicionarlinha()">Adicionar</button>
+    <button type="button" onclick="adicionarLinha()">Adicionar</button>
     </form>
     <br><br>
-    <table>
         <table id="tabelaDados">
             <thead>
                <tr>
                 <th>Id</th>
-                <th>Nome</th>
-                <th>Idade</th>
-                <th>Admissão</th>
-                <th>Demissão</th>
+                <th>Produto</th>
+                <th>Marca</th>
+                <th>Segmento</th>
+                <th>Valor</th>
+                <th>Data da venda</th>
                </tr>
             </thead>
+            <tbody>
+
+            </tbody>
         </table>
     </table>
 </body>

@@ -5,12 +5,12 @@ function adicionarLinha() {
     /**
      * teste
      */
-    const id =  document.getElementById("id").value;
-    const produto = document.getElementById("produto").value;
-    const marca = document.getElementById("marca").value;
-    const segmento = document.getElementById("segmento").value;
-    const valor = document.getElementById("valor").value;
-    const datavenda = document.getElementById("data da venda").value;
+    const id =  document.getElementById('id').value;
+    const produto = document.getElementById('produto').value;
+    const marca = document.getElementById('marca').value;
+    const segmento = document.getElementById('segmento').value;
+    const valor = document.getElementById('valor').value;
+    const datavenda = document.getElementById('datavenda').value;
 
     //Se for preenchido vazio
     if(id === '' || produto === '' ||marca === ''||segmento === ''|| valor === ''||datavenda ===''){
@@ -18,10 +18,10 @@ function adicionarLinha() {
     } else {
         
     //Cria uma linha na tabela se não existir
-    const tabela = document.getElementById("tabelaDados").getElementsByTagName('tbody')[0];
+    const tabela = document.getElementById('tabelaDados').getElementsByTagName('tbody')[0];
 
     //Inserindo uma nova linha 
-    const novaLinha = tabela.insertRow;
+    const novaLinha = tabela.insertRow();
 
     //Inserindo os valores da linha 
     const celid = novaLinha.insertCell(0);
@@ -29,7 +29,7 @@ function adicionarLinha() {
     const celmarca = novaLinha.insertCell(2);
     const celsegmento = novaLinha.insertCell(3);
     const celvalor = novaLinha.insertCell(4);
-    const celdatavenda = novaLinha.insertCell(4);
+    const celdatavenda = novaLinha.insertCell(5);
 
     //inserindo os valores dentro das celulas
     celid.innerHTML = id;
@@ -43,7 +43,7 @@ function adicionarLinha() {
     proximoId++
 
     //Limpar formulario
-    document.getElementById("linhaForm").reset();
+    document.getElementById('linhaForm').reset();
 
     }
 }
