@@ -1,0 +1,48 @@
+body{
+    background-color:rgb(130, 9, 9);
+}
+
+H1,p{
+    color:rgb(255, 178, 178)
+}
+
+form{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(130, 9, 9);
+}
+
+input{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin: 5px;
+}
+
+button {
+    background-color: rgb(255, 178, 178)
+}
+
+input {
+    width: 20%;
+    background-color: rgb(255, 165, 165);
+}
+
+table{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td,th {
+    border: 1px solid #ffffff;
+    text-align: left;
+    padding: 8px;
+    color:rgb(255, 178, 178)
+}
+
+tr:nth-child(even){
+    background-color: #ffffff;
+    color:rgb(255, 178, 178)
+}
