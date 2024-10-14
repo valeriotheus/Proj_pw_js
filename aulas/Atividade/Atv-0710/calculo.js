@@ -1,3 +1,5 @@
+let proximoId = 1; 
+
 function baskhara(a, b, c, x) {
     let res;
 
@@ -12,6 +14,8 @@ function baskhara(a, b, c, x) {
                 res = (-b + Math.sqrt(delta)) / (2 * a);
             } else if (x === 2) {
                 res = (-b - Math.sqrt(delta)) / (2 * a);
+            } else {
+                res = 'invalido'; 
             }
         }
     }
@@ -20,49 +24,36 @@ function baskhara(a, b, c, x) {
 }
 
 function adicionarLinha() {
-    //Entrada de valores do formulário
-    /**
-     * teste
-     */
-    const id =  document.getElementById('id').value;
-    const produto = document.getElementById('produto').value;
-    const marca = document.getElementById('marca').value;
-    const segmento = document.getElementById('segmento').value;
-    const valor = document.getElementById('valor').value;
-    const datavenda = document.getElementById('datavenda').value;
+    // Entrada de valores do formulário
+    const a = parseFloat(document.getElementById('a').value);
+    const b = parseFloat(document.getElementById('b').value);
+    const c = parseFloat(document.getElementById('c').value);
+    const x = parseInt(document.getElementById('x').value);
 
-    //Se for preenchido vazio
-    if(id === '' || produto === '' ||marca === ''||segmento === ''|| valor === ''||datavenda ===''){
-        alert("Preencha os valores do formulário!")
+    if (isNaN(a) || isNaN(b) || isNaN(c) || isNaN(x)) {
+        alert("Preencha os valores do formulário!");
     } else {
-        
-    //Cria uma linha na tabela se não existir
-    const tabela = document.getElementById('tabelaDados').getElementsByTagName('tbody')[0];
+        // Cria uma linha na tabela
+        const tabela = document.getElementById('tabelaDados').getElementsByTagName('tbody')[0];
+        const novaLinha = tabela.insertRow();
 
-    //Inserindo uma nova linha 
-    const novaLinha = tabela.insertRow();
+        // Inserindo os valores da linha 
+        const cela = novaLinha.insertCell(0);
+        const celb = novaLinha.insertCell(1);
+        const celc = novaLinha.insertCell(2);
+        const celx = novaLinha.insertCell(3);
+        const celres = novaLinha.insertCell(4); 
+       
+        const res = baskhara(a, b, c, x);
 
-    //Inserindo os valores da linha 
-    const celid = novaLinha.insertCell(0);
-    const celproduto = novaLinha.insertCell(1);
-    const celmarca = novaLinha.insertCell(2);
-    const celsegmento = novaLinha.insertCell(3);
-    const celvalor = novaLinha.insertCell(4);
-    const celdatavenda = novaLinha.insertCell(5);
+        cela.innerHTML = a;
+        celb.innerHTML = b;
+        celc.innerHTML = c;
+        celx.innerHTML = x;
+        celres.innerHTML = res; 
 
-    //inserindo os valores dentro das celulas
-    celid.innerHTML = id;
-    celproduto.innerHTML = produto;
-    celmarca.innerHTML = marca;
-    celsegmento.innerHTML = segmento;
-    celvalor.innerHTML = valor;
-    celdatavenda.innerHTML = datavenda;
+        proximoId++;
 
-    
-    proximoId++
-
-    //Limpar formulario
-    document.getElementById('linhaForm').reset();
-
+        document.getElementById('linhaForm').reset();
     }
 }

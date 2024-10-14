@@ -43,6 +43,6 @@ td,th {
 }
 
 tr:nth-child(even){
-    background-color: #ffffff;
+    background-color: rgb(130, 9, 9);
     color:rgb(255, 178, 178)
 }

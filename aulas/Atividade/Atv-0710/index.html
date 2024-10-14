@@ -5,20 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculos de Baskhara</title>
     <link rel="stylesheet" href="./estilo.css">
-    <script src="./forms.js"></script>
 </head>
 <body>
     <h1>Registro - Calculos de Baskhara</h1>
     <p>Preencha todas as informações solicitadas no formulário corretamente</p>
     <hr>
     <form id="linhaForm">
-    <input type="number" name="a" id="a" placeholder="Digite o primeiro número" required>
+    <input type="number" name="a" id="a" placeholder="Digite o A da fórmula" required>
     <br><br>
-    <input type="number" name="b" id="b" placeholder="Digite o segundo número" required>
+    <input type="number" name="b" id="b" placeholder="Digite o B da fórmula" required>
     <br><br>
-    <input type="number" name="c" id="c" placeholder="Digite o terceiro número" required>
+    <input type="number" name="c" id="c" placeholder="Digite o C da fórmula" required>
     <br><br>
-    <input type="number" name="X" id="X" placeholder="Digite o X da equação" required>
+    <input type="number" name="x" id="x" placeholder="1 ou 2" required>
     <br><br>
     <button type="button" onclick="adicionarLinha()">Adicionar</button>
     </form>
@@ -26,17 +25,17 @@
         <table id="tabelaDados">
             <thead>
                <tr>
-                <th>nº</th>
                 <th>a</th>
                 <th>b</th>
                 <th>c</th>
                 <th>x</th>
+                <th>nº (resultado)</th>
                </tr>
             </thead>
             <tbody>
 
             </tbody>
         </table>
-    </table>
 </body>
+<script src="./calculo.js"></script>
 </html>
